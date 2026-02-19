@@ -1,3 +1,28 @@
 baseURL = 'https://proresidential.biz/'
 languageCode = 'en-us'
 title = 'Pro Residential Services'
+
+[params]
+  phone = "508-922-2353"
+  email = "proresidentialservices@gmail.com"
+  location = "Middleboro, MA"
+  owner = "Phil DiRuzza"
+  tagline = "Quality Construction & Remodeling in Southeastern Massachusetts"
+  license = "Licensed General Contractor"
+  experience = "30+ Years of Experience"
+  description = "Pro Residential Services — licensed general contractor Phil DiRuzza serving Middleboro and Southeastern Massachusetts with over 30 years of experience in remodeling, additions, ADUs, and more."
+
+[[menus.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menus.main]]
+  name = "Gallery"
+  url = "/gallery/"
+  weight = 2
+
+[[menus.main]]
+  name = "About"
+  url = "/about/"
+  weight = 3
