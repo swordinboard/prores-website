@@ -1,105 +1,82 @@
 ---
 title: "Services"
-description: "Professional residential services including landscaping, maintenance, and more."
+description: "Professional residential construction and remodeling services in the Bristol-Plymouth area."
 ---
 
 ## Our Services
 
-Pro Residential Services offers a comprehensive range of home and property services. Whatever your needs, our experienced team is ready to help.
+Pro Residential Services offers a full range of residential construction and remodeling services for homeowners in the Bristol-Plymouth area. From new builds to renovations, our team delivers quality results you can count on.
 
 ---
 
-### 🌿 Landscaping & Lawn Care
+### 🪟 Windows and Doors
 
-**Regular Lawn Maintenance**
-- Weekly/bi-weekly mowing
-- Edging and trimming
-- Leaf removal
-- Seasonal cleanups
+Upgrade your home's comfort, security, and curb appeal with professional window and door installation.
 
-**Landscape Design & Installation**
-- Custom garden design
-- Plant and shrub installation
-- Mulching and ground cover
-- Flower bed creation
-
-**Lawn Health**
-- Fertilization programs
-- Weed control
-- Aeration and overseeding
-- Irrigation system maintenance
+- Replacement window installation
+- New construction windows
+- Bay and specialty windows
+- Exterior sliding door installation
+- Entry and main door installation
+- Interior and exterior door upgrades
 
 ---
 
-### 🔧 Home Maintenance
+### 🏗️ Decks and Stoops
 
-**General Repairs**
-- Minor carpentry
-- Door and window repairs
-- Drywall patching
-- Fixture installation
+Enhance your outdoor living with a new or refreshed deck or stoop built to last.
 
-**Seasonal Maintenance**
-- Gutter cleaning
-- HVAC filter replacement
-- Smoke detector checks
-- Weatherization prep
-
-**Preventive Care**
-- Home inspection walkthroughs
-- Maintenance scheduling
-- Problem identification
-- Vendor coordination
+- New deck construction
+- Deck replacement and rebuilds
+- Stoop replacement and updates
+- Composite, PVC, and pressure-treated material options
 
 ---
 
-### 🏠 Exterior Services
+### 🏠 Accessory Dwelling Units (ADU)
 
-**Pressure Washing**
-- Driveways and walkways
-- Decks and patios
-- Siding and fences
-- Outdoor furniture
+Take advantage of Massachusetts' new ADU by-right law and add valuable space to your property.
 
-**Deck & Fence Care**
-- Cleaning and staining
-- Board replacement
-- Hardware tightening
-- Weatherproofing
+- Attached in-law suite style ADUs
+- Fully detached accessory structures
+- Design and permitting guidance
+- New construction from foundation up
+- Conversion of existing spaces
 
-**Gutter Services**
-- Cleaning and flushing
-- Guard installation
-- Minor repairs
-- Downspout clearing
+ADUs are a smart investment — whether for family, rental income, or added flexibility. We'll walk you through your options under the new state law.
 
 ---
 
-### 📅 Service Plans
+### ➕ Additions and Basements
 
-Save time and money with our maintenance plans:
+Expand your living space without moving. Additions and basement finishes add new square footage or unlock the space you already have.
 
-**Basic Plan**
-- Monthly lawn care
-- Quarterly gutter cleaning
-- Annual inspection
-
-**Premium Plan**
-- Weekly lawn care
-- Bi-monthly pressure washing
-- Seasonal landscaping
-- Priority scheduling
-
-**Custom Plan**
-- Tailored to your needs
-- Flexible scheduling
-- Volume discounts
+- Room additions and bump-outs
+- Attached garage additions
+- Basement finishing and conversion
+- Home gym, bedroom, or hosting room builds
+- Structural work and framing
+- Finish carpentry
+- Full project management
 
 ---
 
-### Request a Quote
+### 🔨 Remodeling
 
-Every property is unique. Contact us for a free, no-obligation estimate tailored to your specific needs.
+Bring new life to your home with updated styles, better layouts, and modern materials.
+
+- Kitchen and bathroom remodels
+- Open floor plan conversions
+- Window and door enlargements for more natural light
+- Flooring, trim, and finish upgrades
+- Full room transformations
+- Material and design selections
+
+---
+
+### Not Sure Where to Start?
+
+We're happy to walk through your project with you and help you understand your options. Contact us for a free estimate — no pressure, just honest advice.
 
 [Get Your Free Estimate →](/contact/)
 
@@ -107,4 +84,4 @@ Every property is unique. Contact us for a free, no-obligation estimate tailored
 
 ### Service Area
 
-We proudly serve residential customers throughout the [Your Area] region. Not sure if we cover your location? [Contact us](/contact/) to find out.
+We serve residential homeowners throughout the Bristol-Plymouth area. Not sure if we cover your location? [Reach out](/contact/) and we'll let you know.

@@ -4,18 +4,19 @@ title: "Home"
 
 ## Welcome to Pro Residential Services
 
-We provide professional, reliable residential services to homeowners in the local area. With years of experience and a commitment to quality, we're your trusted partner for all your home service needs.
+We provide professional, reliable residential construction and remodeling services to homeowners in the Bristol-Plymouth area. With years of experience and a commitment to quality, we're your trusted partner for all your home service needs.
 
 ### Our Services
 
-**Landscaping & Lawn Care**  
-From regular maintenance to complete landscape design, we keep your outdoor spaces beautiful year-round.
+**Windows and Doors** — Intallation of replacement or new construction style windows and doors. From sliders to main entrances to garage access.
 
-**Home Maintenance**  
-General repairs, seasonal maintenance, and preventive care to protect your investment.
+**Decks and Stoops** — Replacement, updates, or new builds with many material and style options.
 
-**Exterior Services**  
-Pressure washing, gutter cleaning, and exterior maintenance to keep your home looking its best.
+**Accessory Dwellong Units (ADU)** — The new state ADU by right law gives homehowners more options for that extra space. Options include attatched in-law style ADUs or fully detatched buildings.
+
+**Additions and Basements** — Capture a new space by adding on or claiming an unfinished basement. A home gym, a hosting room, extra bedrooms, an attatched garage, the possibilities are endless.
+
+**Remodeling** — Bring new life to your home with modern styles and materials. Create open spaces, let in more light, and match your home to you.
 
 ---
 
@@ -23,8 +24,8 @@ Pressure washing, gutter cleaning, and exterior maintenance to keep your home lo
 
 - **Licensed & Insured** — Full protection for your peace of mind
 - **Experienced Team** — Skilled professionals dedicated to quality
-- **Reliable Service** — On-time arrivals and consistent results
-- **Fair Pricing** — Transparent quotes with no hidden fees
+- **Reliable Service** — Consistent and honest results
+- **Fair Pricing** — Transparent quotes with no hidden fees, and allowances for you to build in your own options.
 
 ---
 
@@ -32,4 +33,4 @@ Pressure washing, gutter cleaning, and exterior maintenance to keep your home lo
 
 Contact us today for a free estimate. We're here to help with all your residential service needs.
 
-📞 [Call Us](#contact) | 📧 [Email Us](#contact) | 📍 [Service Area](#about)
+{{</* button url="/contact/" label="Contact Us" */>}}
