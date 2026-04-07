@@ -1,3 +1,56 @@
-baseURL = 'https://proresidential.biz/'
-languageCode = 'en-us'
-title = 'Pro Residential Services'
+baseURL = "https://proresidentialservices.com/"
+languageCode = "en-us"
+title = "Pro Residential Services"
+theme = "hermit-v2"
+enableRobotsTXT = true
+enableGitInfo = true
+
+[author]
+  name = "Pro Residential Services"
+
+[params]
+  homeTitle = "Pro Residential Services"
+  homeSubtitle = "Quality Home Services You Can Trust"
+  description = "Professional residential services including landscaping, maintenance, and home improvement."
+  themeColor = "#1a1a1a"
+  accentColor = "#f26522"
+  dateform = "Jan 2, 2006"
+  dateformShort = "Jan 2"
+  dateformNum = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+  homeSubtitlePrinter = true
+  scrollToTop = true
+  justifyContent = false
+  relatedPosts = false
+  code_copy_button = false
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Services"
+    url = "/services/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Gallery"
+    url = "/gallery/"
+    weight = 3
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
+
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
