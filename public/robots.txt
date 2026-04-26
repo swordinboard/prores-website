@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://proresidentialservices.com/sitemap.xml
+Sitemap: https://proresidential.biz/sitemap.xml
