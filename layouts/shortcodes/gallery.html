@@ -1,0 +1,79 @@
+{{/* layouts/shortcodes/gallery.html — overrides Hermit V2 theme gallery
+     Supports optional per-image captions using pipe notation:
+       /images/gallery/photo.jpg|Caption text here
+     Lines without a pipe use the filename (sans extension) as the caption.
+*/}}
+
+{{- if not (and $.Site.Params.gallery $.Site.Params.gallery.enable) -}}
+    {{- warnf "Gallery shortcode used on page '%s' but gallery.enable is not true in hugo.toml." .Page.Path -}}
+{{- else -}}
+    {{- $galleryId := printf "gallery-%s" (substr (md5 .Inner) 0 8) -}}
+    {{- $lines := split .Inner "\n" -}}
+
+    <div class="image-gallery" id="{{ $galleryId }}">
+        {{- range $index, $rawLine := $lines -}}
+            {{- $line := strings.TrimSpace $rawLine -}}
+            {{- if $line -}}
+
+                {{/* Split on | to get path and optional caption */}}
+                {{- $parts  := split $line "|" -}}
+                {{- $source  := strings.TrimSpace (index $parts 0) -}}
+                {{- $caption := "" -}}
+                {{- if gt (len $parts) 1 -}}
+                    {{- $caption = strings.TrimSpace (index $parts 1) -}}
+                {{- end -}}
+
+                {{- $thumbnailUrl  := "" -}}
+                {{- $fullImageUrl  := "" -}}
+                {{- $isRemote := or (strings.HasPrefix $source "http://") (strings.HasPrefix $source "https://") -}}
+                {{- $isStatic := and (not $isRemote) (strings.HasPrefix $source "/") -}}
+
+                {{- if $isRemote -}}
+                    {{- $fullImageUrl  = $source -}}
+                    {{- $thumbnailUrl  = $source -}}
+                    {{- if eq $caption "" -}}
+                        {{- $fn := path.Base $source -}}
+                        {{- $caption = strings.TrimSuffix (path.Ext $fn) $fn | humanize | title -}}
+                    {{- end -}}
+                {{- else if $isStatic -}}
+                    {{- $fullImageUrl = printf "%s%s" $.Page.Site.BaseURL (strings.TrimLeft "/" $source) -}}
+                    {{- $thumbnailUrl = $fullImageUrl -}}
+                    {{- if eq $caption "" -}}
+                        {{- $fn := path.Base $source -}}
+                        {{- $caption = strings.TrimSuffix (path.Ext $fn) $fn | humanize | title -}}
+                    {{- end -}}
+                {{- else -}}
+                    {{- $imageResource := resources.Get $source -}}
+                    {{- if $imageResource -}}
+                        {{- $dim  := $.Site.Params.gallery.thumbnail | default "300" -}}
+                        {{- $spec := printf "%sx%s Smart" $dim $dim -}}
+                        {{- $thumb := $imageResource.Fill $spec -}}
+                        {{- $thumbnailUrl = $thumb.RelPermalink -}}
+                        {{- $fullImageUrl = $imageResource.RelPermalink -}}
+                        {{- if eq $caption "" -}}
+                            {{- $caption = strings.TrimSuffix (path.Ext $imageResource.Name) $imageResource.Name | humanize | title -}}
+                        {{- end -}}
+                    {{- else -}}
+                        {{- warnf "Gallery: asset not found '%s' on page '%s'" $source $.Page.Path -}}
+                    {{- end -}}
+                {{- end -}}
+
+                {{- if $fullImageUrl -}}
+                {{- $dim := $.Site.Params.gallery.thumbnail | default "300" -}}
+                <a href="{{ $fullImageUrl }}"
+                   class="gallery-item"
+                   data-lightbox-group="{{ $galleryId }}"
+                   data-title="{{ $caption }}">
+                    <img src="{{ $thumbnailUrl }}"
+                         alt="{{ $caption }}"
+                         width="{{ $dim }}"
+                         height="{{ $dim }}"
+                         loading="lazy">
+                    <div class="gallery-item-caption">{{ $caption }}</div>
+                </a>
+                {{- end -}}
+
+            {{- end -}}
+        {{- end -}}
+    </div>
+{{- end -}}
