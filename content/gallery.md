@@ -6,6 +6,7 @@ description: "Browse our portfolio of completed construction and remodeling proj
 Browse our completed projects. Each photo is a real job — no stock images.
 
 {{< gallery >}}
+/images/gallery/photo16.jpg|Deck With Black Aluminum Railing
 /images/gallery/photo1.jpg|Kitchen Remodel
 /images/gallery/photo2.jpg|Bathroom Remodel
 /images/gallery/photo3.jpg|Bedroom Renovation
