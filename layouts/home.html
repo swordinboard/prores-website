@@ -14,6 +14,9 @@
 	{{- end }}
 	<div id="spotlight" {{- if ne false .Site.Params.usesAnimation }} class="animated fadeIn" {{- end -}}>
 		<div id="home-center">
+			<div id="home-logo">
+				<img src="/images/logo.png" alt="{{ .Site.Title }}">
+			</div>
 			<h1 id="home-title">{{ .Site.Title }}</h1>
 			{{- with .Site.Params.homeSubtitle }}
 			    <div id="typewriter-container">
