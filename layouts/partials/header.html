@@ -1,32 +1,22 @@
-<header id="site-header" {{- if .Site.Params.usesAnimation }} class="animated slideInUp" {{- end -}}>
-	<div class="hdr-wrapper section-inner">
-		<div class="hdr-left">
-			<div class="site-branding">
-				<a href="{{.Site.BaseURL}}" aria-label="{{ .Site.Title }}">
-					<img src="/images/logo.png" alt="{{ .Site.Title }}" class="site-logo">
-				</a>
+<header id="site-header">
+	<div class="hdr-wrapper">
+		<a href="{{ .Site.BaseURL }}" class="hdr-logo" aria-label="{{ .Site.Title }}">
+			<img src="/images/logo.png" alt="{{ .Site.Title }}">
+		</a>
+		<div class="hdr-brand-nav">
+			<div class="hdr-titles">
+				<span class="hdr-site-name">{{ .Site.Title }}</span>
+				{{- with .Site.Params.homeSubtitle }}
+				<span class="hdr-site-sub">{{ . }}</span>
+				{{- end }}
 			</div>
-			<nav class="site-nav hide-in-mobile">{{- partialCached "menu.html" . -}}</nav>
+			<nav class="hdr-nav site-nav hide-in-mobile">
+				{{- partialCached "menu.html" . -}}
+			</nav>
 		</div>
-		<div class="hdr-right hdr-icons">
-			{{ if (or .Params.images .Params.featuredImg) -}}
-			<button id="img-btn" class="hdr-btn" title="{{- if fileExists "i18n" -}} {{ i18n "featuredImage" }} {{-
-				else -}} Featured Image {{- end -}}">{{- partial "svg.html" (dict "context" . "name" "featuredImg")
-				-}}</button>
-			{{- end }}
-			{{- with .Params.toc -}}
-			<button id="toc-btn" class="hdr-btn desktop-only-ib" title="{{- if fileExists "i18n" -}}
-				{{i18n "tableOfContents" }} {{- else -}} Table Of Contents {{- end -}}">{{- partial "svg.html" (dict
-				"context" . "name" "toc") -}}</button>
-			{{- end -}}
-			{{- with .Site.Params.socialLinks -}}
-			<span class="hdr-links hide-in-mobile">{{- partialCached "social-icons.html" . -}}</span>
-			{{- end -}}
-			{{- if and (not (eq .Site.Params.shareSocial nil)) (.Site.Params.shareSocial) (templates.Exists
-			"partials/social-share.html") -}}{{- partial "social-share.html" . -}}{{- end -}}
-			<button id="menu-btn" class="hdr-btn" title="{{- if fileExists "i18n" -}} {{ i18n "menu" }} {{- else -}}
-				Menu {{- end -}}">{{- partial "svg.html" (dict "context" . "name" "menuBtn") -}}</button>
-		</div>
+		<button id="menu-btn" class="hdr-btn" title="Menu">
+			{{- partial "svg.html" (dict "context" . "name" "menuBtn") -}}
+		</button>
 	</div>
 </header>
 <div id="mobile-menu" {{- if ne false .Site.Params.usesAnimation }} class="animated fast" {{- end -}}>

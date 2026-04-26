@@ -1,44 +1,17 @@
-{{ define "head" }}
-	{{ if .Site.Params.bgImg -}}
-	<style>.bg-img {background-image: url('{{.Site.Params.bgImg}}');}</style>
-	{{- else if .Site.Params.images -}}
-		{{- range first 1 .Site.Params.images -}}
-		<style>.bg-img {background-image: url('{{. | absURL}}');}</style>
-		{{- end -}}
-	{{- end -}}
+{{ define "header" }}
+{{ partial "header.html" . }}
 {{ end }}
 
 {{ define "main" }}
-	{{- if (or .Site.Params.images .Site.Params.bgImg) }}
-	<div class="bg-img"></div>
-	{{- end }}
-	<div id="spotlight" {{- if ne false .Site.Params.usesAnimation }} class="animated fadeIn" {{- end -}}>
-		<div id="home-center">
-			<div id="home-logo">
-				<img src="/images/logo.png" alt="{{ .Site.Title }}">
-			</div>
-			<h1 id="home-title">{{ .Site.Title }}</h1>
-			{{- with .Site.Params.homeSubtitle }}
-			    <div id="typewriter-container">
-        			<p id="home-subtitle">{{.}}</p>
-    			</div>
-			{{- end }}
-			{{- with .Site.Params.socialLinks }}
-			<div id="home-links">
-				{{ partialCached "social-icons.html" . }}
-			</div>
-			{{- end }}
-			<nav id="home-nav" class="site-nav">
-				{{ partialCached "menu.html" . }}
-			</nav>
-		</div>
-		<div id="home-footer">{{- if templates.Exists "partials/index-footer.html" -}}{{- partialCached "index-footer.html" . -}}{{- else -}}{{- partial "footer.html" . -}}{{- end -}}</div>
+<main class="site-main section-inner {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">
+	<div class="content home-content">
+		{{ .Content | safeHTML }}
 	</div>
-	{{- with .Content }}
-	<main class="site-main section-inner {{- if ne false $.Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">
-		<div class="content home-content">
-			{{ . | safeHTML }}
-		</div>
-	</main>
-	{{- end }}
+</main>
+{{ end }}
+
+{{ define "footer" }}
+<footer id="site-footer" class="section-inner {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">
+	{{- partial "footer.html" . -}}
+</footer>
 {{ end }}
