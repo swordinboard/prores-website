@@ -6,22 +6,22 @@ description: "Browse our portfolio of completed construction and remodeling proj
 Browse our completed projects. Each photo is a real job — no stock images.
 
 {{< gallery >}}
-/images/gallery/photo16.jpg|Deck With Black Aluminum Railing
+/images/gallery/photo16.jpg|Deck with Aluminum Railing and Vertical/Slat Lattice
 /images/gallery/photo1.jpg|Kitchen Remodel
 /images/gallery/photo2.jpg|Bathroom Remodel
-/images/gallery/photo3.jpg|Bedroom Renovation
-/images/gallery/photo4.jpg|Built-In Entertainment Center
-/images/gallery/photo5.jpg|Interior Renovation
-/images/gallery/photo6.jpg|Interior Space
-/images/gallery/photo7.jpg|Composite Deck
-/images/gallery/photo8.jpg|Deck With Rails
+/images/gallery/photo3.jpg|Entryway Addition (Interior Finish Shown)
+/images/gallery/photo4.jpg|Built-In Cherru Entertainment Center
+/images/gallery/photo5.jpg|Charred Oak Renovation
+/images/gallery/photo6.jpg|Charred Oak Waitress Station
+/images/gallery/photo7.jpg|Composite Deck with Wraparound Steps
+/images/gallery/photo15.jpg|Vinyl Siding, PVC Trim, Deck WIP 
+/images/gallery/photo8.jpg|Deck with Horizontal Rails
+/images/gallery/photo14.jpg|Deck Frame WIP
 /images/gallery/photo9.jpg|Waterfront Deck
-/images/gallery/photo10.jpg|Exterior Siding
-/images/gallery/photo11.jpg|Siding Replacement
-/images/gallery/photo12.jpg|Screened Porch
+/images/gallery/photo10.jpg|Vinyl Siding
+/images/gallery/photo11.jpg|Vinyl Siding with PVC Trim
+/images/gallery/photo12.jpg|Deck to Three Season Room Conversion, Cedar Shingles
 /images/gallery/photo13.jpg|New Construction
-/images/gallery/photo14.jpg|Deck Framing
-/images/gallery/photo15.jpg|Deck Construction
 {{< /gallery >}}
 
 ---
