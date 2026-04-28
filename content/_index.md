@@ -19,7 +19,7 @@ Decks|/images/gallery/photo16.jpg|New builds, replacements, and rebuilds in comp
 
 ---
 
-### Licensed & Insured &nbsp;·&nbsp; Free Estimates
+**Licensed & Insured** &nbsp;·&nbsp; **Free Estimates**
 
 **Call:** [(508) 922-2353](tel:5089222353) &nbsp;&nbsp; **Email:** [proresidentialservices@gmail.com](mailto:proresidentialservices@gmail.com)
 
