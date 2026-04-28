@@ -1,9 +1,1 @@
-{{/* Load gallery lightbox JS on pages that use the service-grid shortcode
-     (baseof.html already handles the gallery page via HasShortcode "gallery") */}}
-{{- if and (.HasShortcode "service-grid") .Site.Params.gallery .Site.Params.gallery.enable -}}
-    {{- $galleryJS := resources.Get "js/gallery.js" -}}
-    {{- if $galleryJS -}}
-        {{- $galleryJS = $galleryJS | minify | fingerprint -}}
-        <script defer src="{{ $galleryJS.RelPermalink }}" {{ printf "integrity=%q" $galleryJS.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
-    {{- end -}}
-{{- end -}}
+{{/* placeholder — reserved for future per-page script injection */}}

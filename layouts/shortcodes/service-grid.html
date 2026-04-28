@@ -3,17 +3,16 @@
 
        {{< service-grid >}}
        Service Title|/images/gallery/photo1.jpg|Short description
-       Another Service|/images/gallery/photo2.jpg|Another description
+       No Photo Yet||Description with no image
        {{< /service-grid >}}
 
-     Each line = one card. Clicking the card opens the image in a lightbox.
-     Lines with no image path still render as text-only cards.
+     Each line = one card. Clicking navigates to the gallery page.
+     Image is optional — cards without one get a styled fallback.
 */}}
 
-{{- $groupId := "services-lightbox" -}}
-{{- $lines   := split .Inner "\n" -}}
+{{- $lines := split .Inner "\n" -}}
 
-<div class="image-gallery services-grid" id="{{ $groupId }}">
+<div class="services-grid">
 {{- range $lines -}}
     {{- $line := strings.TrimSpace . -}}
     {{- if $line -}}
@@ -24,16 +23,10 @@
         {{- if gt (len $parts) 1 -}}{{- $image = strings.TrimSpace (index $parts 1) -}}{{- end -}}
         {{- if gt (len $parts) 2 -}}{{- $desc  = strings.TrimSpace (index $parts 2) -}}{{- end -}}
 
-        {{- $fullUrl := $image -}}
-        {{- if and $image (strings.HasPrefix $image "/") -}}
-            {{- $fullUrl = printf "%s%s" $.Page.Site.BaseURL (strings.TrimLeft "/" $image) -}}
-        {{- end -}}
+        {{- $hasImage := ne $image "" -}}
 
-        <a href="{{ $fullUrl }}"
-           class="service-card gallery-item"
-           data-lightbox-group="{{ $groupId }}"
-           data-title="{{ $title }}">
-            <div class="service-card-bg"{{ with $image }} style="background-image:url('{{ . }}')"{{ end }}>
+        <a href="/gallery/" class="service-card{{ if not $hasImage }} service-card--no-image{{ end }}">
+            <div class="service-card-bg"{{ if $hasImage }} style="background-image:url('{{ $image }}')"{{ end }}>
                 <div class="service-card-overlay">
                     <h3>{{ $title }}</h3>
                     {{- with $desc }}<p>{{ . }}</p>{{- end }}

@@ -188,16 +188,21 @@ code {
 }
 
 // ==========================================
-// SERVICES GRID — image cards with lightbox
+// SERVICES GRID — image cards linking to gallery
 // ==========================================
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 0.9rem;
+  grid-template-columns: 1fr 1fr;  // 2 columns on mobile
+  gap: 0.7rem;
   margin: 1.5em 0 2em;
-  // override gallery layout from theme
-  justify-items: stretch;
+}
+
+@media (min-width: 560px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.9rem;
+  }
 }
 
 .service-card {
@@ -205,11 +210,9 @@ code {
   position: relative;
   border-radius: 6px;
   overflow: hidden;
-  height: 200px;
+  height: 150px;
   text-decoration: none;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: none; // reset gallery-item default
 
   &:hover {
     transform: translateY(-4px);
@@ -217,32 +220,36 @@ code {
   }
 }
 
+@media (min-width: 560px) {
+  .service-card { height: 200px; }
+}
+
 .service-card-bg {
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-color: #2a2521; // fallback if no image
   position: relative;
 }
 
+// Photo card — gradient overlay at bottom
 .service-card-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1em 1.2em 1em;
+  padding: 0.7em 0.9em;
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.88) 0%,
-    rgba(0, 0, 0, 0.55) 55%,
+    rgba(0, 0, 0, 0.5) 60%,
     transparent 100%
   );
   transition: background 0.2s ease;
 
   h3 {
-    margin: 0 0 0.2em;
-    font-size: 0.9em;
+    margin: 0 0 0.15em;
+    font-size: 0.82em;
     font-weight: 700;
     color: #f26522;
     text-transform: uppercase;
@@ -252,9 +259,18 @@ code {
 
   p {
     margin: 0;
-    font-size: 0.8em;
-    line-height: 1.4;
+    font-size: 0.75em;
+    line-height: 1.35;
     color: rgba(255, 255, 255, 0.82);
+  }
+}
+
+@media (min-width: 560px) {
+  .service-card-overlay {
+    padding: 1em 1.2em;
+
+    h3 { font-size: 0.9em; }
+    p  { font-size: 0.8em; }
   }
 }
 
@@ -262,9 +278,33 @@ code {
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.94) 0%,
-    rgba(0, 0, 0, 0.7) 55%,
+    rgba(0, 0, 0, 0.68) 60%,
     rgba(0, 0, 0, 0.15) 100%
   );
+}
+
+// No-image fallback — solid dark card with orange accent
+.service-card--no-image .service-card-bg {
+  background-color: #1e1b18;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid #f26522;
+}
+
+.service-card--no-image .service-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em 1.2em;
+
+  h3 { font-size: 0.9em; margin-bottom: 0.3em; }
+  p  { color: rgba(255, 255, 255, 0.55); }
+}
+
+.service-card--no-image:hover .service-card-overlay {
+  background: rgba(242, 101, 34, 0.06);
 }
 
 // ==========================================
