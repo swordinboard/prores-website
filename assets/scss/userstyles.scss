@@ -188,47 +188,83 @@ code {
 }
 
 // ==========================================
-// SERVICES GRID
+// SERVICES GRID — image cards with lightbox
 // ==========================================
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.9rem;
   margin: 1.5em 0 2em;
+  // override gallery layout from theme
+  justify-items: stretch;
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 3px solid rgba(242, 101, 34, 0.4);
-  border-radius: 4px;
-  padding: 1.1em 1.3em;
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  display: block;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 200px;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: none; // reset gallery-item default
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.service-card-bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: #2a2521; // fallback if no image
+  position: relative;
+}
+
+.service-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em 1.2em 1em;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.55) 55%,
+    transparent 100%
+  );
+  transition: background 0.2s ease;
 
   h3 {
-    margin: 0 0 0.4em;
-    font-size: 0.95em;
+    margin: 0 0 0.2em;
+    font-size: 0.9em;
     font-weight: 700;
     color: #f26522;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
   }
 
   p {
     margin: 0;
-    font-size: 0.85em;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8em;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.82);
   }
+}
 
-  &:hover {
-    background: rgba(242, 101, 34, 0.08);
-    border-color: #f26522;
-    border-left-color: #f26522;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-  }
+.service-card:hover .service-card-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.94) 0%,
+    rgba(0, 0, 0, 0.7) 55%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
 }
 
 // ==========================================

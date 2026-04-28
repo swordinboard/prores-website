@@ -1,0 +1,45 @@
+{{/* layouts/shortcodes/service-grid.html
+     Usage in _index.md:
+
+       {{< service-grid >}}
+       Service Title|/images/gallery/photo1.jpg|Short description
+       Another Service|/images/gallery/photo2.jpg|Another description
+       {{< /service-grid >}}
+
+     Each line = one card. Clicking the card opens the image in a lightbox.
+     Lines with no image path still render as text-only cards.
+*/}}
+
+{{- $groupId := "services-lightbox" -}}
+{{- $lines   := split .Inner "\n" -}}
+
+<div class="image-gallery services-grid" id="{{ $groupId }}">
+{{- range $lines -}}
+    {{- $line := strings.TrimSpace . -}}
+    {{- if $line -}}
+        {{- $parts := split $line "|" -}}
+        {{- $title := strings.TrimSpace (index $parts 0) -}}
+        {{- $image := "" -}}
+        {{- $desc  := "" -}}
+        {{- if gt (len $parts) 1 -}}{{- $image = strings.TrimSpace (index $parts 1) -}}{{- end -}}
+        {{- if gt (len $parts) 2 -}}{{- $desc  = strings.TrimSpace (index $parts 2) -}}{{- end -}}
+
+        {{- $fullUrl := $image -}}
+        {{- if and $image (strings.HasPrefix $image "/") -}}
+            {{- $fullUrl = printf "%s%s" $.Page.Site.BaseURL (strings.TrimLeft "/" $image) -}}
+        {{- end -}}
+
+        <a href="{{ $fullUrl }}"
+           class="service-card gallery-item"
+           data-lightbox-group="{{ $groupId }}"
+           data-title="{{ $title }}">
+            <div class="service-card-bg"{{ with $image }} style="background-image:url('{{ . }}')"{{ end }}>
+                <div class="service-card-overlay">
+                    <h3>{{ $title }}</h3>
+                    {{- with $desc }}<p>{{ . }}</p>{{- end }}
+                </div>
+            </div>
+        </a>
+    {{- end -}}
+{{- end -}}
+</div>
