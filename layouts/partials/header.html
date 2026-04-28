@@ -1,0 +1,28 @@
+<header id="site-header">
+	<div class="hdr-wrapper">
+		<a href="{{ .Site.BaseURL }}" class="hdr-logo" aria-label="{{ .Site.Title }}">
+			<img src="/images/logo.png" alt="{{ .Site.Title }}">
+		</a>
+		<div class="hdr-brand-nav">
+			<div class="hdr-titles">
+				<span class="hdr-site-name">{{ .Site.Title }}</span>
+				{{- with .Site.Params.homeSubtitle }}
+				<span class="hdr-site-sub">{{ . }}</span>
+				{{- end }}
+			</div>
+			<nav class="hdr-nav site-nav hide-in-mobile">
+				{{- partialCached "menu.html" . -}}
+			</nav>
+		</div>
+		<button id="menu-btn" class="hdr-btn" title="Menu">
+			{{- partial "svg.html" (dict "context" . "name" "menuBtn") -}}
+		</button>
+	</div>
+</header>
+<div id="mobile-menu" {{- if ne false .Site.Params.usesAnimation }} class="animated fast" {{- end -}}>
+	<ul>
+		{{- range .Site.Menus.main }}
+		<li><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
+		{{- end }}
+	</ul>
+</div>

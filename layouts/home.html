@@ -1,0 +1,17 @@
+{{ define "header" }}
+{{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<main class="site-main section-inner {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">
+	<div class="content home-content">
+		{{ .Content | safeHTML }}
+	</div>
+</main>
+{{ end }}
+
+{{ define "footer" }}
+<footer id="site-footer" class="section-inner {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">
+	{{- partial "footer.html" . -}}
+</footer>
+{{ end }}

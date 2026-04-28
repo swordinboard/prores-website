@@ -3,26 +3,22 @@ languageCode = "en-us"
 title = "Pro Residential Services"
 theme = "hermit-v2"
 enableRobotsTXT = true
-enableGitInfo = true
-
-[author]
-  name = "Pro Residential Services"
+copyright = "Pro Residential Services"
 
 [params]
-  homeTitle = "Pro Residential Services"
-  homeSubtitle = false
-  description = "Professional residential services including renovations, additions, and ADU's."
-  themeColor = "#1a1a1a"
+  homeSubtitle = "Licensed General Contractor · Middleboro, MA"
+  description = "Pro Residential Services — Licensed General Contractor serving Middleboro MA. Remodeling, additions, ADUs, finished basements, decks, windows, doors, and exterior siding."
   accentColor = "#f26522"
-  dateform = "Jan 2, 2006"
-  dateformShort = "Jan 2"
-  dateformNum = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04"
-  homeSubtitlePrinter = true
+  footerCopyright = ""
   scrollToTop = true
   justifyContent = false
   relatedPosts = false
   code_copy_button = false
+  homeSubtitlePrinter = false
+
+  [params.gallery]
+    enable = true
+    thumbnail = "400"
 
 [menu]
   [[menu.main]]
@@ -31,24 +27,14 @@ enableGitInfo = true
     weight = 1
 
   [[menu.main]]
-    name = "Services"
-    url = "/services/"
-    weight = 2
-
-  [[menu.main]]
     name = "Gallery"
     url = "/gallery/"
-    weight = 3
+    weight = 2
 
   [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 4
-
-  [[menu.main]]
-    name = "Contact"
-    url = "/contact/"
-    weight = 5
+    weight = 3
 
 [markup]
   [markup.goldmark]

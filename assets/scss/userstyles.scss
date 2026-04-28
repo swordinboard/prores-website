@@ -1,0 +1,254 @@
+// ==========================================
+// WARM BACKGROUND OVERRIDES
+// Hermit defaults to a slightly blue-gray (#494f5c); replace with warmer tones
+// ==========================================
+
+html {
+  background: #46423e;
+}
+
+// Code block backgrounds
+pre {
+  background: #2a2521;
+  code { background: transparent; }
+}
+
+code {
+  background: #3a3330;
+}
+
+// Syntax highlight wrapper
+.highlight div,
+.highlight pre {
+  background: #2a2521;
+}
+
+// ==========================================
+// HEADER — override Hermit's fixed-bottom bar
+// ==========================================
+
+#site-header {
+  position: sticky;
+  top: 0;
+  bottom: unset;
+  z-index: 100;
+  background-color: #000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  animation: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hdr-wrapper {
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  font-size: 1rem;
+  max-width: 100%;
+}
+
+.hdr-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  box-shadow: none;
+
+  img {
+    height: 68px;
+    width: auto;
+    display: block;
+    filter: invert(1);
+    transition: opacity 0.2s;
+  }
+
+  &:hover img { opacity: 0.85; }
+}
+
+.hdr-brand-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.55em 1em 0.55em 0.5em;
+  min-width: 0;
+}
+
+.hdr-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.hdr-site-name {
+  font-size: clamp(1.1em, 2.5vw, 1.7em);
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.hdr-site-sub {
+  font-size: clamp(0.7em, 1.5vw, 0.9em);
+  color: rgba(255, 255, 255, 0.65);
+  font-style: italic;
+  margin-top: 0.15em;
+}
+
+.hdr-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  a {
+    color: rgba(255, 255, 255, 0.75);
+    margin-left: 1.6em;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    text-decoration: none;
+    transition: color 0.2s;
+    box-shadow: none;
+
+    &:hover {
+      color: #f26522;
+      text-shadow: none;
+    }
+  }
+}
+
+// Mobile hamburger button
+#menu-btn {
+  color: rgba(255, 255, 255, 0.8);
+  align-self: center;
+  padding: 0 1em;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &:hover { color: #f26522; }
+}
+
+// Mobile dropdown — below top header
+#mobile-menu {
+  position: fixed;
+  top: 90px;
+  bottom: unset;
+  right: 0;
+  left: unset;
+  background-color: #1a1512;
+  box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.6);
+
+  ul { line-height: 2.2; }
+
+  a {
+    color: rgba(255, 255, 255, 0.8);
+    &:hover { color: #f26522; }
+  }
+}
+
+// ==========================================
+// PAGE LAYOUT — reset bottom-header margins
+// ==========================================
+
+.site-main { margin-top: 2em; }
+
+@media (min-width: 800px)  { .site-main { margin-top: 2.5em; } }
+@media (min-width: 960px)  { .site-main { margin-top: 3em; } }
+@media (min-width: 1300px) { .site-main { margin-top: 3em; } }
+
+// ==========================================
+// FOOTER
+// ==========================================
+
+#site-footer {
+  margin-bottom: 2em;
+  margin-top: 3em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.2em;
+  text-align: center;
+  font-size: 0.7em;
+  color: rgba(255, 255, 255, 0.5);
+
+  a {
+    color: rgba(255, 255, 255, 0.6);
+    &:hover { color: #f26522; text-shadow: none; }
+  }
+
+  p { margin: 0; }
+}
+
+// ==========================================
+// HOME PAGE CONTENT
+// ==========================================
+
+.home-content {
+  max-width: 1100px;
+  margin: 0 auto 2em;
+  padding: 0 1.5em;
+}
+
+// ==========================================
+// SERVICES GRID
+// ==========================================
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+  margin: 1.5em 0 2em;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid rgba(242, 101, 34, 0.4);
+  border-radius: 4px;
+  padding: 1.1em 1.3em;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+
+  h3 {
+    margin: 0 0 0.4em;
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #f26522;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.85em;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:hover {
+    background: rgba(242, 101, 34, 0.08);
+    border-color: #f26522;
+    border-left-color: #f26522;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+}
+
+// ==========================================
+// BUTTON SHORTCODE
+// ==========================================
+
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: #f26522;
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  box-shadow: none !important;
+
+  &:hover {
+    background-color: #d4541a;
+    color: #fff !important;
+    text-shadow: none;
+  }
+}

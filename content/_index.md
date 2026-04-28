@@ -2,35 +2,49 @@
 title: "Home"
 ---
 
-## Welcome to Pro Residential Services
+## Our Services
 
-We provide professional, reliable residential construction and remodeling services to homeowners in the Bristol-Plymouth area. With years of experience and a commitment to quality, we're your trusted partner for all your home service needs.
+Phil DiRuzza and Pro Residential Services offer comprehensive residential construction and remodeling throughout the Bristol–Plymouth area, with over 30 years of hands-on experience behind every project.
 
-### Our Services
-
-**Windows and Doors** — Intallation of replacement or new construction style windows and doors. From sliders to main entrances to garage access.
-
-**Decks and Stoops** — Replacement, updates, or new builds with many material and style options.
-
-**Accessory Dwellong Units (ADU)** — The new state ADU by right law gives homehowners more options for that extra space. Options include attatched in-law style ADUs or fully detatched buildings.
-
-**Additions and Basements** — Capture a new space by adding on or claiming an unfinished basement. A home gym, a hosting room, extra bedrooms, an attatched garage, the possibilities are endless.
-
-**Remodeling** — Bring new life to your home with modern styles and materials. Create open spaces, let in more light, and match your home to you.
+<div class="services-grid">
+  <div class="service-card">
+    <h3>Remodeling</h3>
+    <p>Kitchen, bathroom, and full-room transformations with modern materials and layouts</p>
+  </div>
+  <div class="service-card">
+    <h3>Additions</h3>
+    <p>Room additions, bump-outs, and attached garages to expand your living space</p>
+  </div>
+  <div class="service-card">
+    <h3>Accessory Dwelling Units</h3>
+    <p>Attached in-law suites or detached structures under Massachusetts' ADU by-right law</p>
+  </div>
+  <div class="service-card">
+    <h3>Finished Basements</h3>
+    <p>Home gym, office, extra bedroom, or entertainment space — finished right</p>
+  </div>
+  <div class="service-card">
+    <h3>Interior Carpentry</h3>
+    <p>Custom trim, built-ins, millwork, and finish carpentry throughout your home</p>
+  </div>
+  <div class="service-card">
+    <h3>Windows &amp; Doors</h3>
+    <p>Replacement or new construction windows and doors, from sliders to grand entries</p>
+  </div>
+  <div class="service-card">
+    <h3>Exterior Siding</h3>
+    <p>Professional installation to boost curb appeal and protect against the elements</p>
+  </div>
+  <div class="service-card">
+    <h3>Decks</h3>
+    <p>New builds, replacements, and rebuilds in composite, PVC, or pressure-treated materials</p>
+  </div>
+</div>
 
 ---
 
-### Why Choose Us?
+### Licensed & Insured &nbsp;·&nbsp; Free Estimates
 
-- **Licensed & Insured** — Full protection for your peace of mind
-- **Experienced Team** — Skilled professionals dedicated to quality
-- **Reliable Service** — Consistent and honest results
-- **Fair Pricing** — Transparent quotes with no hidden fees, and allowances for you to build in your own options.
+**Call:** [(508) 922-2353](tel:5089222353) &nbsp;&nbsp; **Email:** [proresidentialservices@gmail.com](mailto:proresidentialservices@gmail.com)
 
----
-
-### Ready to Get Started?
-
-Contact us today for a free estimate. We're here to help with all your residential service needs.
-
-{{</* button url="/contact/" label="Contact Us" */>}}
+We serve Middleboro, Lakeville, Taunton, Bridgewater, Plymouth, and throughout Bristol, Plymouth, and Barnstable counties.
