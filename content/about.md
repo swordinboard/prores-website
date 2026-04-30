@@ -5,7 +5,7 @@ description: "Learn about Pro Residential Services — a family-run construction
 
 ## Who We Are
 
-Pro Residential Services is a family-run construction and remodeling company based in Middleboro, Massachusetts. My father, Phil DiRuzza, started this business on a simple commitment: do quality work, be straight with people, and stand behind every project. That's still how we operate.
+Pro Residential Services is a family-run construction and remodeling company based in Middleboro, Massachusetts. My name is Anthony, I'm an on-site manager with 10+ years on the tools. My father, Phil DiRuzza, started this business on a simple commitment: do quality work, be straight with people, and stand behind every project. That's still how we operate.
 
 We serve homeowners throughout Bristol, Plymouth, and Barnstable counties — from kitchen and bathroom remodels to full additions, finished basements, decks, and everything in between.
 
