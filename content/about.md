@@ -11,7 +11,7 @@ Pro Residential Services is a full-service construction and remodeling company b
 
 ### Phil DiRuzza — Owner & Licensed General Contractor
 
-Phil DiRuzza founded Pro Residential Services with a straightforward commitment: do quality work, treat people fairly, and stand behind every project. With over **30 years of hands-on construction experience**, Phil brings deep expertise to every job — whether it's a window replacement, a finished basement, or a full addition.
+Phil DiRuzza founded Pro Residential Services with a commitment to quality work and an honest approach. With over **30 years of hands-on construction experience**, Phil brings deep expertise to every job — whether it's a window replacement, a finished basement, or a full addition.
 
 Phil holds a Massachusetts General Contractor license and personally oversees every project from estimate to completion. When a project calls for specialty trades, Phil works with a trusted network of licensed subcontractors who meet the same standard of quality.
 
@@ -29,8 +29,9 @@ Phil holds a Massachusetts General Contractor license and personally oversees ev
 
 We serve residential homeowners across the greater Middleboro–Lakeville area and beyond:
 
-- Taunton · Bridgewater · Pembroke · Halifax
-- Plympton · Carver · Wareham · Plymouth
+- Taunton · Bridgewater · Plympton
+- Carver · Plymouth · Wareham
+- Freetown · Acushnet · Rochester
 - Throughout Bristol, Plymouth, and Barnstable counties
 
 *Not sure if we cover your area? Give us a call — we are happy to help.*
