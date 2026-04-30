@@ -6,6 +6,13 @@ description: "Browse our portfolio of completed construction and remodeling proj
 Browse our completed projects. Each photo is a real job — no stock images.
 
 {{< gallery >}}
+/images/gallery/photo17.jpg|Exterior Cedar Shingle Renovation
+/images/gallery/photo18.jpg|Custom Built-In With Wood Accent Wall
+/images/gallery/photo19.jpg|Ranch House Exterior Siding Renovation
+/images/gallery/photo20.jpg|Tile Patio Installation
+/images/gallery/photo21.jpg|Large-Format Porcelain Tile Detail
+/images/gallery/photo22.jpg|Kitchen Remodel With Open Shelving
+/images/gallery/photo23.jpg|Kitchen Renovation With Granite Island
 /images/gallery/photo16.jpg|Deck with Aluminum Railing and Vertical/Slat Lattice
 /images/gallery/photo1.jpg|Kitchen Remodel
 /images/gallery/photo2.jpg|Bathroom Remodel
@@ -14,7 +21,7 @@ Browse our completed projects. Each photo is a real job — no stock images.
 /images/gallery/photo5.jpg|Charred Oak Renovation
 /images/gallery/photo6.jpg|Charred Oak Waitress Station
 /images/gallery/photo7.jpg|Composite Deck with Wraparound Steps
-/images/gallery/photo15.jpg|Vinyl Siding, PVC Trim, Deck WIP 
+/images/gallery/photo15.jpg|Vinyl Siding, PVC Trim, Deck WIP
 /images/gallery/photo8.jpg|Deck with Horizontal Rails
 /images/gallery/photo14.jpg|Deck Frame WIP
 /images/gallery/photo9.jpg|Waterfront Deck

@@ -188,47 +188,119 @@ code {
 }
 
 // ==========================================
-// SERVICES GRID
+// SERVICES GRID — image cards linking to gallery
 // ==========================================
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
   margin: 1.5em 0 2em;
 }
 
+@media (min-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 800px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
 .service-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 3px solid rgba(242, 101, 34, 0.4);
-  border-radius: 4px;
-  padding: 1.1em 1.3em;
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  display: block;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 200px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.service-card-bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+// Photo card — gradient overlay at bottom
+.service-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.7em 0.9em;
+  // Gradient stays solid much further up so the heading (top of overlay) is always covered
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.80) 40%,
+    rgba(0, 0, 0, 0.55) 75%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+  transition: background 0.2s ease;
 
   h3 {
-    margin: 0 0 0.4em;
-    font-size: 0.95em;
+    margin: 0 0 0.15em;
+    font-size: 0.82em;
     font-weight: 700;
     color: #f26522;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
   }
 
   p {
     margin: 0;
-    font-size: 0.85em;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.75em;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.82);
   }
+}
 
-  &:hover {
-    background: rgba(242, 101, 34, 0.08);
-    border-color: #f26522;
-    border-left-color: #f26522;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-  }
+.service-card:hover .service-card-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.85) 40%,
+    rgba(0, 0, 0, 0.65) 75%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+}
+
+// No-image fallback — solid dark card with orange accent
+.service-card--no-image .service-card-bg {
+  background-color: #1e1b18;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid #f26522;
+}
+
+.service-card--no-image .service-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em 1.2em;
+
+  h3 { font-size: 0.9em; margin-bottom: 0.3em; }
+  p  { color: rgba(255, 255, 255, 0.55); }
+}
+
+.service-card--no-image:hover .service-card-overlay {
+  background: rgba(242, 101, 34, 0.06);
 }
 
 // ==========================================
