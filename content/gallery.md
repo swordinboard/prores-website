@@ -6,6 +6,13 @@ description: "Browse our portfolio of completed construction and remodeling proj
 Browse our completed projects. Each photo is a real job — no stock images.
 
 {{< gallery >}}
+/images/gallery/photo17.jpg|Exterior Cedar Shingle Renovation
+/images/gallery/photo18.jpg|Custom Built-In With Wood Accent Wall
+/images/gallery/photo19.jpg|Ranch House Exterior Siding Renovation
+/images/gallery/photo20.jpg|Tile Patio Installation
+/images/gallery/photo21.jpg|Large-Format Porcelain Tile Detail
+/images/gallery/photo22.jpg|Kitchen Remodel With Open Shelving
+/images/gallery/photo23.jpg|Kitchen Renovation With Granite Island
 /images/gallery/photo16.jpg|Deck With Black Aluminum Railing
 /images/gallery/photo1.jpg|Kitchen Remodel
 /images/gallery/photo2.jpg|Bathroom Remodel
